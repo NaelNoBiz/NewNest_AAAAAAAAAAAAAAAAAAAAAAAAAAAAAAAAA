@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "465911577605",
+    "project_id": "newnest-a43cc",
+    "storage_bucket": "newnest-a43cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465911577605:android:179e9a35a7d04b02adb06c",
+        "android_client_info": {
+          "package_name": "com.example.newnest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465911577605-501hd0sfcp4bjmj17hslgs1uu8voi3jv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrfwy-q8TFHvKYRcv6woeCiVwyMoeszBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465911577605-501hd0sfcp4bjmj17hslgs1uu8voi3jv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
