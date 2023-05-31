@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()){
                             Intent goToMainPage = new Intent(MainActivity.this, MainPageActivity.class);
                             startActivity(goToMainPage);
+                            finish();
                         }
                         else{
                             if (task.getException() != null){

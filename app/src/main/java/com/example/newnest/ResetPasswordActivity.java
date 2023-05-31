@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,17 +29,26 @@ public class ResetPasswordActivity extends AppCompatActivity {
         Send=findViewById(R.id.ResetBTN);
         Email=findViewById(R.id.resetPASSET);
         services=new FirebaseServices();
+        Goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         Send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                services.getAuth().sendPasswordResetEmail(Email.toString().trim()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                String mail = Email.getText().toString().trim();
+                services.getAuth().sendPasswordResetEmail(mail).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(ResetPasswordActivity.this, "Reset link sent", Toast.LENGTH_SHORT).show();
                             finish();
                         }
-                        else Toast.makeText(ResetPasswordActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                        else
+                            Log.e("SendPasswordRequest: ", task.getException().getMessage());
+
                     }
 
 
